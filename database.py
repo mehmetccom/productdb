@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
- 
+
 db = SQLAlchemy()
  
 class Category(db.Model):
@@ -19,3 +19,4 @@ class Product(db.Model):
         return "Product(%d, %s, %s, %5.2f, %d)" % (
                 self.id, self.name, self.price, self.category_id)
                 
+

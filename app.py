@@ -27,9 +27,9 @@ def setup_app(app):
         if request.method == 'POST' and request.form['save']:
             p_name = request.form['name']        
             p_price = request.form['price']
-            p_categoryid = 504
+            p_category_id = request.form['categoryid'] 
             
-            product_to_add = Product(name=p_name, price=p_price, category_id=504)
+            product_to_add = Product(name=p_name, price=p_price,  category_id=p_category_id)
             
             db.session.add(product_to_add)
             db.session.flush()
@@ -86,16 +86,17 @@ def setup_app(app):
 
 def app_factory(name=__name__, debug=False):
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost:3306/testdb'
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost:3306/testdb'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://mehmetcoskun:deneme123@10.0.0.5:3306/testdb'
     app.config['SQLALCHEMY_ECHO'] = True
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True    
     app.secret_key = "this5is5our5secret5key55513"
-    app.debug = True    
+    app.debug = True
     db.init_app(app)    
     setup_app(app)
     return app
  
 if __name__ == '__main__':
     app = app_factory(debug=True)    
-    app.run() 
+    app.run(host='0.0.0.0') 
 	

@@ -1,7 +1,7 @@
-FROM python:3
-WORKDIR /usr/webapps/
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
+FROM python:3.8-alpine
+COPY ./requirements.txt /app/requirements.txt
+WORKDIR /app
+RUN pip install -r requirements.txt
+COPY . /app
 EXPOSE 5000
-CMD ["python","app.py"]
+CMD ["python", "app.py"]
