@@ -17,11 +17,8 @@ pipeline {
             steps {                                      
                 echo 'Build the web app..'
                                
-                dir('/home/mehmet/prj') {
-                
-                    deleteDir()
-                    
-                    sh 'rm -rf ./productdb'
+                dir('/home/mehmet/prj') {                
+                    deleteDir()                   
                     sh 'git clone https://github.com/mehmetccom/productdb'
                     sh 'cd /home/mehmet/prj/productdb'
                     sh 'pwd'
