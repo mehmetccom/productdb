@@ -2,17 +2,6 @@ pipeline {
     agent any
     stages {
     
-        stage('Undeploy') {
-            steps {                                      
-                echo 'Undeploy the web app..'                
-                echo 'sudo docker rm -vf $(sudo docker ps -aq)'
-                sh 'sudo docker ps -aq | xargs sudo docker rm -vf'
-                
-                echo 'sudo docker rmi -f $(sudo docker images -aq)'
-                sh 'sudo docker images -aq | xargs sudo docker rmi -f'
-            }
-        }
-
         stage('Get From Version Control') {
             steps {                                      
                 echo 'Get the webapp from version control..'
@@ -43,6 +32,17 @@ pipeline {
             steps {                                      
                 echo 'Test the web app..'
                 sh 'python /home/mehmet/prj/productdb/test.py'                               
+            }
+        }
+        
+        stage('Undeploy') {
+            steps {                                      
+                echo 'Undeploy the web app..'                
+                echo 'sudo docker rm -vf $(sudo docker ps -aq)'
+                sh 'sudo docker ps -aq | xargs sudo docker rm -vf'
+                
+                echo 'sudo docker rmi -f $(sudo docker images -aq)'
+                sh 'sudo docker images -aq | xargs sudo docker rmi -f'
             }
         }
         
