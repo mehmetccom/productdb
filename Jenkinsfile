@@ -5,11 +5,11 @@ pipeline {
         stage('Undeploy') {
             steps {                                      
                 echo 'Undeploy the web app..'                
-                echo 'sudo docker rm -vf $(docker ps -aq)'
-                sh 'sudo docker ps -aq | xargs docker rm -vf'
+                echo 'sudo docker rm -vf $(sudo docker ps -aq)'
+                sh 'sudo docker ps -aq | xargs sudo docker rm -vf'
                 
-                echo 'sudo docker rmi -f $(docker images -aq)'
-                sh 'sudo docker images -aq | xargs docker rmi -f'
+                echo 'sudo docker rmi -f $(sudo docker images -aq)'
+                sh 'sudo docker images -aq | xargs sudo docker rmi -f'
             }
         }
     
