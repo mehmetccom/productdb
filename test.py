@@ -38,7 +38,7 @@ class TestHello(TestCase):
     # Page element may be Name, Price, Category or something 
     # similar that you see on the main page
     def test_product_listing_main_pageby_a_page_element(self):
-        _path = url_for('index')
+        _path = url_for('indexyx')
         response = self.client.get(_path)
         self.assertIn(b'Price', response.data)    
         
