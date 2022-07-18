@@ -20,9 +20,9 @@ pipeline {
                 dir('/home/mehmet/prj') {
                     deleteDir()
                     sh 'sudo git clone https://github.com/mehmetccom/productdb'
-                    sh 'sudo cd /home/mehmet/prj/productdb'
-                    sh 'sudo pwd'
-                    sh 'sudo ls -lR'
+                    sh 'cd /home/mehmet/prj/productdb'
+                    sh 'pwd'
+                    sh 'ls -lR'
                     sh 'sudo docker image build -t product-app-demo-image-1 .'
                 }                                
             }
