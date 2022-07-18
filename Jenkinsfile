@@ -12,21 +12,27 @@ pipeline {
                 sh 'sudo docker images -aq | xargs sudo docker rmi -f'
             }
         }
-    
-        stage('Build') {
+
+        stage('Get From Version Control') {
             steps {                                      
-                echo 'Build the web app..'
+                echo 'Get from version control..'
                                
                 dir('/home/mehmet/prj') {
                     deleteDir()
                     sh 'sudo git clone https://github.com/mehmetccom/productdb'
                 }                
+            }
+        }
+    
+        stage('Build') {
+            steps {                                      
+                echo 'Build the web app..'
+                               
                 dir('/home/mehmet/prj/productdb') {                    
                     sh 'pwd'
                     sh 'ls -lR'
-                    sh 'sudo docker image build -t product-app-demo-image-1 .'
-                    
-                }                
+                    sh 'sudo docker image build -t product-app-demo-image-1 .'                    
+                }
             }
         }
                 
