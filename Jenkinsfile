@@ -17,7 +17,7 @@ pipeline {
             steps {                                      
                 echo 'Build the web app..'
                                
-                dir('/home/mehmet/prj/productdb') {
+                dir('/home/mehmet/prj') {
                 
                     sh 'rm -rf ./productdb'
                     sh 'git clone https://github.com/mehmetccom/productdb'
