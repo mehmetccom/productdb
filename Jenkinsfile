@@ -22,7 +22,7 @@ pipeline {
                 }    
                 
                 dir('/home/mehmet/prj') {                    
-                    sh 'sudo git clone https://github.com/mehmetccom/productdb'
+                    sh 'git clone https://github.com/mehmetccom/productdb'
                 }                
             }
         }
