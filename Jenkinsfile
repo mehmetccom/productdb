@@ -17,8 +17,11 @@ pipeline {
             steps {                                      
                 echo 'Get from version control..'
                                
-                dir('/home/mehmet/prj') {
+                dir('/home/mehmet/prj/productdb') {
                     deleteDir()
+                }    
+                
+                dir('/home/mehmet/prj') {                    
                     sh 'sudo git clone https://github.com/mehmetccom/productdb'
                 }                
             }
