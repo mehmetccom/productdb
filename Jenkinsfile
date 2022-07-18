@@ -5,11 +5,11 @@ pipeline {
         stage('Undeploy') {
             steps {                                      
                 echo 'Undeploy the web app..'                
-                echo 'docker rm -vf $(docker ps -aq)'
-                sh 'docker ps -aq | xargs docker rm -vf'
+                echo 'sudo docker rm -vf $(docker ps -aq)'
+                sh 'sudo docker ps -aq | xargs docker rm -vf'
                 
-                echo 'docker rmi -f $(docker images -aq)'
-                sh 'docker images -aq | xargs docker rmi -f'
+                echo 'sudo docker rmi -f $(docker images -aq)'
+                sh 'sudo docker images -aq | xargs docker rmi -f'
             }
         }
     
@@ -18,11 +18,11 @@ pipeline {
                 echo 'Build the web app..'
                                
                 dir('/home/mehmet/prj') {                             
-                    sh 'git clone https://github.com/mehmetccom/productdb'
-                    sh 'cd /home/mehmet/prj/productdb'
-                    sh 'pwd'
-                    sh 'ls -lR'
-                    sh 'docker image build -t product-app-demo-image-1 .'
+                    sh 'sudo git clone https://github.com/mehmetccom/productdb'
+                    sh 'sudo cd /home/mehmet/prj/productdb'
+                    sh 'sudo pwd'
+                    sh 'sudo ls -lR'
+                    sh 'sudo docker image build -t product-app-demo-image-1 .'
                 }                                
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script{
                     echo 'Deploy the web app..'                    
-                    sh 'docker run -p 5000:5000 -d --name product-app-demo-container-1 product-app-demo-image-1'
+                    sh 'sudo docker run -p 5000:5000 -d --name product-app-demo-container-1 product-app-demo-image-1'
                 }
             }
         }
