@@ -15,7 +15,7 @@ pipeline {
 
         stage('Get From Version Control') {
             steps {                                      
-                echo 'Get from version control..'
+                echo 'Get the webapp from version control..'
                                
                 dir('/home/mehmet/prj/productdb') {
                     deleteDir()
@@ -38,7 +38,14 @@ pipeline {
                 }
             }
         }
-                
+
+        stage('Test') {
+            steps {                                      
+                echo 'Test the web app..'
+                sh 'python /home/mehmet/prj/productdb/test.py'                               
+            }
+        }
+        
         stage('Deploy') {
             steps {
                 script{
@@ -51,3 +58,4 @@ pipeline {
         
     }
 }
+
