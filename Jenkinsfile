@@ -16,18 +16,6 @@ pipeline {
             }
         }
     
-        stage('Build') {
-            steps {                                      
-                echo 'Build the web app..'
-                               
-                dir('/home/mehmet/prj/productdb') {                    
-                    sh 'pwd'
-                    sh 'ls -lR'
-                    sh 'sudo docker image build -t product-app-demo-image-1 .'                    
-                }
-            }
-        }
-
         stage('Test') {
             steps {                                      
                 echo 'Test the web app..'
@@ -46,6 +34,18 @@ pipeline {
             }
         }
         
+        stage('Docker Image Build') {
+            steps {                                      
+                echo 'Build the web app..'
+                               
+                dir('/home/mehmet/prj/productdb') {                    
+                    sh 'pwd'
+                    sh 'ls -lR'
+                    sh 'sudo docker image build -t product-app-demo-image-1 .'                    
+                }
+            }
+        }
+                
         stage('Deploy') {
             steps {
                 script{
