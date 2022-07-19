@@ -22,6 +22,15 @@
           </div>
         </div>
       </nav>
+      
+      <nav class="navbar navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="/" class="navbar-brand"><b>Main Page</b> </a>
+          </div>
+        </div>
+      </nav>
+      
     </header>
 
     <div class="content-wrapper">
@@ -37,6 +46,7 @@
             <form class="form-horizontal" method="POST" action="/updateproduct">            
 			  <input name="product_id" type=hidden value="{{ product['id'] }}"> 	
               <div class="box-body">
+              
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Name</label>
 
@@ -49,9 +59,22 @@
                   <label class="col-sm-2 control-label">Price</label>
 
                   <div class="col-sm-10">
-                    <input name="price" value="{{ product['price'] }}" type="text" class="form-control" placeholder="Price" autocomplete="off" required>
+                    <input name="price" value="{{ product['price'] }}" type="text" class="form-control" placeholder="Price" autocomplete="off" required>                                       
                   </div>
                 </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Category ID</label>
+                  <div class="col-sm-10">                  
+                    <select name="categoryid">
+                        <option value="{{ product[category_id] }}" SELECTED>{{ product['category'].name }}</option>
+                        {% for category in categories %}                        
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>                    
+                  </div>
+                </div>                
+                
               </div>
               <div class="box-footer">
                 <a href="/"><button type="button" class="btn btn-default">Cancel</button></a>

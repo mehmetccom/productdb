@@ -19,8 +19,9 @@ def setup_app(app):
 
     @app.route('/addproductform/')
     def show_product_add_form():
-        return render_template('add.html')
-
+        _categories = Category.query.all()
+        return render_template('add.html', categories = _categories)
+        
     @app.route('/addproduct', methods = ['POST', 'GET'])
     def add_product():
 
@@ -64,26 +65,29 @@ def setup_app(app):
     @app.route('/updateproductform/<int:id>')
     def show_product_update_form(id):
         product_to_update = Product.query.filter_by(id=id).one()
-        return render_template('update.html', product = product_to_update)
+        _categories = Category.query.all()
+        return render_template('update.html', product = product_to_update, categories = _categories)
         
     @app.route('/updateproduct/', methods = ['POST'])
     def update_product():	
         if request.form['product_id']:
             product_id = request.form['product_id']
             p_name = request.form['name']        
-            p_price = request.form['price']        
+            p_price = request.form['price']
+            p_category_id = request.form['categoryid']
             
             query = db.session.query(Product)
             product_to_update = query.filter(Product.id == product_id).one()
             product_to_update.name = p_name
-            product_to_update.price = p_price        
+            product_to_update.price = p_price
+            product_to_update.category_id = p_category_id
             db.session.commit()
             
             flash("Product updated.")
             return redirect(url_for('index'))
         else:
             flash("Error occured while deleting the product..")
-
+            
 def app_factory(name=__name__, debug=False):
     app = Flask(__name__)
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost:3306/testdb'
