@@ -67,7 +67,7 @@
                   <label class="col-sm-2 control-label">Category ID</label>
                   <div class="col-sm-10">                  
                     <select name="categoryid">
-                        <option value="{{ product[category_id] }}" SELECTED>{{ product['category'].name }}</option>
+                        <option value="{{ product['category'].id }}" SELECTED>{{ product['category'].name }}</option>
                         {% for category in categories %}                        
                         <option value="{{ category.id }}">{{ category.name }}</option>
                         {% endfor %}
