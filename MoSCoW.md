@@ -14,21 +14,22 @@ page about this technique:
 > C - Could have
 > W - Won't have.
 
+Here you can find in the below linked page more details on Wikipedia:
 
 https://en.wikipedia.org/wiki/MoSCoW_method
 
-# M - Must have #
+### M - Must have ###
 
 * Product CRUD
 * Keep project in a GitHub project
 * Run the application on Ubuntu 20.04 on MS Azure VM
 
-# S - Should have #
+### S - Should have ###
 
 * Jenkins pipeline based CI/CD system
 * Use GitHub webhook to trigger Jenkins pipeline
 
-# C - Could have #
+### C - Could have ###
  
 * Paging in product listing
 * Category CRUD
@@ -36,7 +37,7 @@ https://en.wikipedia.org/wiki/MoSCoW_method
 * User authentication system
 * Printer friendly version of product list
  
-# W - Won't have #
+### W - Won't have ###
 
 * Shopping cart functionality
 
