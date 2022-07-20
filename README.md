@@ -12,6 +12,10 @@ It may be used to manage a small and may be medium product inventory
 and can be extended for other purposes like inventory and delivery
 management, web based shopping cart or for similar applications.
 
+You can access the product database web application with below link:
+
+http://20.0.8.181:5000/
+
 ### Main Design Philosophy ###
 
 Main philosophy behinde the application design for this project is that keeping
@@ -108,3 +112,16 @@ Below screenshot is a composite of three screenshot of the application
 that it displays product listing, add new product and update a product.
 
 ![Product Database Screenshot](/images/product-db-screenshot-whole.png)
+
+### Microsoft Azure Ubuntu Linux 20.04 Server Virtual Machine ###
+
+You can see the ubuntu linux server virtual machine on MS Azure in below
+screenshot. It is MS Azure dashboard.
+
+Please note that the marked public IP section of the server that you can
+access the product database web application with below link:
+
+http://20.0.8.181:5000/
+
+![Linux Server VM on MS Azure](/images/ms-azure-dashboard-my-linux-server-vm-21-07-2022.png)
+
