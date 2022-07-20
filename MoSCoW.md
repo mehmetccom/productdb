@@ -7,7 +7,6 @@ page about this technique:
 project management, and software development to reach a common understanding with 
 stakeholders on the importance they place on the delivery of each 
 requirement; it is also known as MoSCoW prioritization or MoSCoW analysis.
-
 The term Moscow itself is an acronym derived from the first letter of each of four prioritization 
 categories: M - Must have, S - Should have, C - Could have, W - Won't have.*
 
