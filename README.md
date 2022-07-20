@@ -60,3 +60,35 @@ code of the application from GitHub. Then it runs tests and then it creates the
 docker images.
 
 Final stage of Jenkins pipeline is running the application in Docker container.
+
+### Project Management ###
+
+I use Trello for project management that I organise task in three different
+categories; To Do, Doing, Done.
+
+I think category names explain themselves.
+
+I may use Scrum or Kanban but I think those are for teams consisting at least
+couple of people.
+
+I worked on my own in this project. So that To Do, Doing and Done style project
+management is enough for managing my own project.
+
+I use Trello to keep track of those three categories. Trello is simple but very
+capable free web based service for managing any type of project.
+
+I use coloured labels that Trello provides as labels. Colors do not have
+any logical meanings in my project. The reason I use coloured labels is for
+making it easy to see.
+
+Each label is a point of difficulty that level increase as I add new labels.
+
+For example 5 labels means it is a difficult task to implement. 4 is difficult
+again but less then 5. Again, 2 and 3 has medium difficulty.
+
+1 label means it is an easy to implement task.
+
+You may have an idea below screenshot of my Trello board.
+
+![Product Database Trello Board](/images/my-trello-board-21-07-2022.png)
+
