@@ -29,7 +29,7 @@ category table keeping product category information.
 
 ![Database Design](/images/db-design-20-06-2022.png)
 
-### System Architecture ###
+### Web Application Architecture ###
 
 The backend utilizes Python Flask web application framework.
 
@@ -51,6 +51,8 @@ by default more secure than hand-coded database application layer usage.
 
 SQL Injection attacks is being prevented by design and by defualt this way.
 
+### System Architecture ###
+
 I run this application on Ubuntu Linux 20.04 on MS Azure that any Python 3,
 Flask and MySQL installed linux system would be capable to run the application.
 
@@ -59,11 +61,15 @@ this application here. This way, developer does not have to install modules, lib
 tools and all those same things one by one for each install like development
 and production computer.
 
+### CI/CD with Jenkins ###
+
 Docker image is being created by Jenkins by a pipeline that it gets the source
 code of the application from GitHub. Then it runs tests and then it creates the
 docker images.
 
 Final stage of Jenkins pipeline is running the application in Docker container.
+
+![Jenkins Pipeline](/images/jenkins-pipeline-21-07-2022.png)
 
 ### Project Management ###
 
