@@ -102,3 +102,9 @@ You may have an idea below screenshot of my Trello board.
 
 ![Product Database Trello Board](/images/my-trello-board-21-07-2022.png)
 
+### Product Database Web Application Screenshots ###
+
+Below screenshot is a composite of three screenshot of the application
+that it displays product listing, add new product and update a product.
+
+![Product Database Screenshot](/images/product-db-screenshot-whole.png)
