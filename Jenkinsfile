@@ -2,19 +2,6 @@ pipeline {
     agent any
     stages {
     
-        stage('Get From Version Control') {
-            steps {                                      
-                echo 'Get the webapp from version control..'
-                               
-                dir('/home/mehmet/prj/productdb') {
-                    deleteDir()
-                }    
-                
-                dir('/home/mehmet/prj') {                    
-                    sh 'git clone https://github.com/mehmetccom/productdb'
-                }                
-            }
-        }
     
         stage('Test') {
             steps {                                      
