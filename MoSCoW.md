@@ -3,12 +3,16 @@
 I would like to introduce MoSCoW method with a quote from the Wikipedia
 page about this technique:
 
-*The Moscow method is a prioritization technique used in management, business analysis,
-project management, and software development to reach a common understanding with 
-stakeholders on the importance they place on the delivery of each 
-requirement; it is also known as MoSCoW prioritization or MoSCoW analysis.
-The term Moscow itself is an acronym derived from the first letter of each of four prioritization 
-categories: M - Must have, S - Should have, C - Could have, W - Won't have.*
+> The Moscow method is a prioritization technique used in management, business analysis,
+> project management, and software development to reach a common understanding with 
+> stakeholders on the importance they place on the delivery of each 
+> requirement; it is also known as MoSCoW prioritization or MoSCoW analysis.
+> The term Moscow itself is an acronym derived from the first letter of each of four prioritization 
+> categories:
+> M - Must have
+> S - Should have
+> C - Could have
+> W - Won't have.
 
 
 https://en.wikipedia.org/wiki/MoSCoW_method
