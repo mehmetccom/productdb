@@ -21,11 +21,15 @@ Python, Flask, Ubuntu Linux, Docker, Jenkins and MS Azure.
 Those are comprehensive and very capable tools in their own context. So that
 keeping the app side as understandable as possible is the main philosophy.
 
-### System Architecture ###
+### Database Design ###
 
 The web application records product data into MySQL database in two
 tables; product and category. Product table keeps products while
 category table keeping product category information.
+
+![Database Design](/images/db-design-20-06-2022.png)
+
+### System Architecture ###
 
 The backend utilizes Python Flask web application framework.
 
