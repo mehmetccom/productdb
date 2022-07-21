@@ -65,6 +65,10 @@ this application here. This way, developer does not have to install modules, lib
 tools and all those same things one by one for each install like development
 and production computer.
 
+You can see the holistic view of the system in the below hand depicted image.
+
+![Holistic View](/images/holistic-view-21-07-2022.jpg)
+
 ### CI/CD with Jenkins ###
 
 Docker image is being created by Jenkins by a pipeline that it gets the source
