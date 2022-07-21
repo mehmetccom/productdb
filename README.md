@@ -14,7 +14,9 @@ management, web based shopping cart or for similar applications.
 
 You can access the product database web application with below link:
 
+```
 http://20.0.8.181:5000/
+```
 
 ### Main Design Philosophy ###
 
@@ -121,7 +123,9 @@ screenshot. It is MS Azure dashboard.
 Please note that the marked public IP section of the server that you can
 access the product database web application with below link:
 
+```
 http://20.0.8.181:5000/
+```
 
 ![Linux Server VM on MS Azure](/images/ms-azure-dashboard-my-linux-server-vm-21-07-2022.png)
 
@@ -145,14 +149,18 @@ web application framework.
 
 Here you can check out the details of Python's unittest:
 
+```
 https://docs.python.org/3/library/unittest.html
+```
 
 The purpose of using unittest instead of popular unit testing framework Pytest is
 that I wanted to keep testing as simple as possible.
 
 Here you can check out Pytest for further information.
 
+```
 https://www.pytest.org
+```
 
 I think I achieved my purpose that Jenkins pipeline stops
 when any test fails so that no new deployment if a test fails.
