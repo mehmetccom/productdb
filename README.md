@@ -125,3 +125,15 @@ http://20.0.8.181:5000/
 
 ![Linux Server VM on MS Azure](/images/ms-azure-dashboard-my-linux-server-vm-21-07-2022.png)
 
+### Important Security Notes & TODO ###
+
+* Please do not use it on production without a careful investigation of the codebase
+* Database username, password and MySQL connection URI is hard in the codebase. So that
+it is a risky in terms of cyber security. Please use docker -e or --env-file argument
+with an environment file that you can store those values instead of using them
+hard coded in app.py file.
+
+Here you can find more information about -e and --env-file arguments of docker command
+line utility.
+
+https://stackoverflow.com/questions/30494050/how-do-i-pass-environment-variables-to-docker-containers
