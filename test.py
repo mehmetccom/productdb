@@ -23,13 +23,6 @@ class TestHello(TestCase):
         response = self.client.get(_path)
         self.assertIn(b'Product Database', response.data)    
 
-    # We can test the main page against db content
-    # since main page lists database content
-    def test_product_listing_main_pageby_db_content(self):
-        _path = url_for('index')
-        response = self.client.get(_path)
-        self.assertIn(b'Game Boy', response.data)    
-
     # Page element may be Name, Price, Category or something 
     # similar that you see on the main page
     def test_product_listing_main_pageby_a_page_element(self):
