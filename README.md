@@ -176,6 +176,7 @@ and MS Azure.
 Some areas to improve;
 
 * Docker Swarm facility may be used to make it auto-scaling application
+* Docker Compose may be used to automate Docker related things
 * Hard coded folder and file names can be made variable
 * Similarly, hard coded username, password and database connection URI may be variable
 * [Nginx](https://nginx.org/) web server can be used along with [Gunicorn](https://gunicorn.org/) instead of Flask web server
