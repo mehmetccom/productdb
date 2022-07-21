@@ -14,9 +14,7 @@ management, web based shopping cart or for similar applications.
 
 You can access the product database web application with below link:
 
-```
 [Product Database Application](http://20.0.8.181:5000/)
-```
 
 ### Main Design Philosophy ###
 
@@ -123,9 +121,7 @@ screenshot. It is MS Azure dashboard.
 Please note that the marked public IP section of the server that you can
 access the product database web application with below link:
 
-```
 [Product Database Application](http://20.0.8.181:5000/)
-```
 
 ![Linux Server VM on MS Azure](/images/ms-azure-dashboard-my-linux-server-vm-21-07-2022.png)
 
@@ -140,9 +136,7 @@ hard coded in app.py file.
 Here you can find more information about -e and --env-file arguments of docker command
 line utility.
 
-```
 [Docker -e and --env-file parameters](https://stackoverflow.com/questions/30494050/how-do-i-pass-environment-variables-to-docker-containers)
-```
 
 ### Notes About Testing The Application ###
 
@@ -151,18 +145,14 @@ web application framework.
 
 Here you can check out the details of Python's unittest:
 
-```
 [Python Unittest](https://docs.python.org/3/library/unittest.html)
-```
 
 The purpose of using unittest instead of popular unit testing framework Pytest is
 that I wanted to keep testing as simple as possible.
 
 Here you can check out Pytest for further information.
 
-```
 [Pytest](https://www.pytest.org)
-```
 
 I think I achieved my purpose that Jenkins pipeline stops
 when any test fails so that no new deployment if a test fails.
