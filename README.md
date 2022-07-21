@@ -72,7 +72,7 @@ You can see the holistic view of the system in the below hand depicted image.
 Let me briefly explain how CI/CD works;
 
 * Developer commits and pushes changes to GitHub
-* A GitHub webhook executes and it does an HTTP post to Jenkins server
+* As soon as a commit happens, a GitHub webhook executes and it does an HTTP post to Jenkins server
 * Jenkins server starts the corresponding pipeline when it gets triggered by GitHub webhook
 * Jenkins pipeline executes the first stage
 * First stage in the pipeline automatically gets source code from GitHub (Declarative Checkout SCM)
