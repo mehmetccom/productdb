@@ -163,3 +163,19 @@ when any test fails so that no new deployment if a test fails.
 
 There is always room for improvement that I can write more and better
 tests using Pytest in future versions of this application.
+
+### Areas To Improve ###
+
+I think there is always room to improve your craft.
+
+This web application is a proof of concept that demonstrates
+
+Web Development with Python Flask, MySQL HTML and CSS on Docker, Ubuntu
+and MS Azure.
+
+Some areas to improve;
+
+* Docker Swarm facility may be used to make it auto-scaling application
+* Hard coded folder and file names can be made variable
+* Similarly, hard coded username, password and database connection URI may be variable
+* [Nginx](https://nginx.org/) web server can be used along with [Gunicorn](https://gunicorn.org/) instead of Flask web server
