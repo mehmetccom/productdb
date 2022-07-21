@@ -25,6 +25,16 @@ Python, Flask, Ubuntu Linux, Docker, Jenkins and MS Azure.
 Those are comprehensive and very capable tools in their own context. So that
 keeping the app side as understandable as possible is the main philosophy.
 
+### MoSCoW - Method Project Features ###
+
+I have used MoSCoW technique to define feature set of the project.
+
+Please refer to MoSCoW.md file in this folder for full details.
+
+Here its link also below
+
+[MoSCoW File](https://github.com/mehmetccom/productdb/blob/main/MoSCoW.md)
+
 ### Database Design ###
 
 The web application records product data into MySQL database in two
