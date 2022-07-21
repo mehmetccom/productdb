@@ -137,3 +137,25 @@ Here you can find more information about -e and --env-file arguments of docker c
 line utility.
 
 https://stackoverflow.com/questions/30494050/how-do-i-pass-environment-variables-to-docker-containers
+
+### Notes About Testing The Application ###
+
+I have used Python's default unit testing framework and flask_testing of Flask
+web application framework.
+
+Here you can check out the details of Python's unittest:
+
+https://docs.python.org/3/library/unittest.html
+
+The purpose of using unittest instead of popular unit testing framework Pytest is
+that I wanted to keep testing as simple as possible.
+
+Here you can check out Pytest for further information.
+
+https://www.pytest.org
+
+I think I achieved my purpose that Jenkins pipeline stops
+when any test fails so that no new deployment if a test fails.
+
+There is always room for improvement that I can write more and better
+tests using Pytest in future versions of this application.
