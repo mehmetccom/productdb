@@ -31,7 +31,14 @@ I have used MoSCoW technique to define feature set of the project.
 
 Please refer to MoSCoW.md file in this folder for full details.
 
-Here its link also below
+This file includes the features in below logic according to MoSCoW method:
+
+* Must Have
+* Should Have
+* Could Have
+* Won't have
+
+Here its link also below:
 
 [MoSCoW File](https://github.com/mehmetccom/productdb/blob/main/MoSCoW.md)
 
