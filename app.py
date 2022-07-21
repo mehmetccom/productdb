@@ -36,7 +36,7 @@ def setup_app(app):
             db.session.flush()
             if product_to_add.id > 0:
                 db.session.commit()
-                flash("A new product has been added.")
+                flash("A new product has been added. IT IS A DEMO LINE THAT WE ADD TO SEE HOW OUR FLOW WORKS!!!")
             else:
                 flash("A new product can not be added")
             return redirect(url_for('index'))
