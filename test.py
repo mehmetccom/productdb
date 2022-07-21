@@ -28,7 +28,7 @@ class TestHello(TestCase):
     def test_product_listing_main_pageby_db_content(self):
         _path = url_for('index')
         response = self.client.get(_path)
-        self.assertIn(b'Nintendo DS Lite', response.data)    
+        self.assertIn(b'Game Boy', response.data)    
 
     # Page element may be Name, Price, Category or something 
     # similar that you see on the main page
