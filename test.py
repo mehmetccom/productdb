@@ -15,12 +15,7 @@ class TestHello(TestCase):
  
     def tearDown(self):
         pass
-        
-    def test_hello_no_names(self):
-        _path = url_for('demotest', demo_test_value='Mehmet')
-        response = self.client.get(_path)
-        self.assertIn(b'Mehmet', response.data)
-       
+               
     # We can test the main page against its main
     # header, which is 'Product Database' at the moment
     def test_product_listing_main_page(self):
@@ -40,7 +35,7 @@ class TestHello(TestCase):
     def test_product_listing_main_pageby_a_page_element(self):
         _path = url_for('index')
         response = self.client.get(_path)
-        self.assertIn(b'Price', response.data)    
+        self.assertIn(b'Price', response.data)
         
 if __name__ == '__main__':
     unittest.main()
