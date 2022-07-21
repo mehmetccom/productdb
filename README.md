@@ -69,6 +69,18 @@ You can see the holistic view of the system in the below hand depicted image.
 
 ![Holistic View](/images/holistic-view-21-07-2022.jpg)
 
+Let me briefly explain how CI/CD works;
+
+* Developer commits and pushes changes to GitHub
+* A GitHub webhook executes and it does an HTTP post to Jenkins server
+* Jenkins server starts the corresponding pipeline when it gets triggered by GitHub webhook
+* Jenkins pipeline executes the first stage
+* First stage in the pipeline automatically gets source code from GitHub (Declarative Checkout SCM)
+* Then stages Test, Undeploy, Docker Image Build and Deploy gets executed automatically
+* Docker Daemon on Ubuntu Linux runs the Python Flask web application
+* Python Flask web application servers on port 5000 to users' web browsers
+
+
 ### CI/CD with Jenkins ###
 
 Docker image is being created by Jenkins by a pipeline that it gets the source
@@ -173,7 +185,7 @@ This web application is a proof of concept that demonstrates
 Web Development with Python Flask, MySQL HTML and CSS on Docker, Ubuntu
 and MS Azure.
 
-Some areas to improve;
+**Some areas to improve;**
 
 * Docker Swarm facility may be used to make it auto-scaling application
 * Docker Compose may be used to automate Docker related things
